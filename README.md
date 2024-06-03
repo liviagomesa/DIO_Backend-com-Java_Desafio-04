@@ -64,28 +64,35 @@ classDiagram
 https://github.com/glysns/trilha-java-basico/desafios/poo/README.md
 ```
 
-## Solução
+## A solução
+
+Segue o diagrama UML:
 
 ```mermaid
 classDiagram
-    Animal <|-- Duck
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-      +String beakColor
-      +swim()
-      +quack()
+    iPhone "1..*" o--> ReprodutorMusical
+    iPhone "1" o--> AparelhoTelefonico
+    iPhone "1..*" o--> NavegadorInternet
+    
+    class ReprodutorMusical{
+        -String musica
+        +tocar() void
+        +pausar() void
+        +selecionarMusica(String musica) void
     }
-    class Fish{
-      -int sizeInFeet
-      -canEat()
+
+    class AparelhoTelefonico{
+        -String numero
+        +ligar(String numero) void
+        +atender() void
+        +iniciarCorreioVoz() void
     }
-    class Zebra{
-      +bool is_wild
-      +run()
+
+    class NavegadorInternet{
+        -String url
+        +exibirPagina(String url) void
+        +adicionarNovaAba() void
+        +atualizarPagina() void
     }
 ```
+
