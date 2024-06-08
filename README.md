@@ -75,24 +75,22 @@ classDiagram
     iPhone "1..*" o--> NavegadorInternet
     
     class ReprodutorMusical{
-        -String musica
         +tocar() void
         +pausar() void
         +selecionarMusica(String musica) void
     }
 
     class AparelhoTelefonico{
-        -String numero
         +ligar(String numero) void
         +atender() void
         +iniciarCorreioVoz() void
     }
 
     class NavegadorInternet{
-        -String url
         +exibirPagina(String url) void
         +adicionarNovaAba() void
         +atualizarPagina() void
     }
 ```
 
+As classes e interfaces correspondentes em Java estão na pasta src.
